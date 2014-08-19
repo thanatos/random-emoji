@@ -4,7 +4,6 @@ import random
 
 import requests
 
-result = requests.get('https://api.github.com/emojis')
-result = result.json()
+result = requests.get('https://api.github.com/emojis').json()
 
 print(':{}:'.format(random.choice(list(result.keys()))))
